@@ -49,7 +49,7 @@ const Home = () => {
                 <Loader />
             ) : (
                 
-                <div style={{minHeight:"100vh",padding:"100px"}}>
+                <div className='container' style={{minHeight:"100vh",paddingTop:"100px"}}>
                     {/* <HeroSection /> */}
                     {/* <GoogleOAuthSuccessRedirect/> */}
                  
