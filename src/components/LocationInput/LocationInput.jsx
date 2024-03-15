@@ -32,11 +32,14 @@ function LocationInput() {
   };
 
   return (
-    <div>
-      <input type="text" className="form-control p-3 rounded-4"
+    <>
+    <div className=' d-flex jusify-content-center align-items-center'>
+    <input type="text" className="form-control px-3 py-2 rounded-3"
  value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Enter your address" />
       <button className='btnCustom btnFilled fw-bold rounded-3 px-2  text-nowrap' onClick={getCurrentLocation}>Get Current Location</button>
     </div>
+      
+    </>
   );
 }
 
