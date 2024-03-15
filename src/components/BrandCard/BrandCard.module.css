@@ -1,0 +1,37 @@
+.brandCard {
+  border: #ECECEC solid 2px;
+  cursor: pointer;
+
+}
+
+.brandCard img {
+  opacity: .6;
+  width: 100%; 
+  height: 100%; 
+  object-fit: contain; 
+}
+
+.brandCard:hover {
+  border: #D49F15 solid 2px;
+}
+
+.brandCard:hover img {
+  opacity: 1;
+}
+
+.brandName {
+  color: #939393;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.brandCard:hover .brandName {
+  color: #D49F15;
+  font-weight: 700;
+}
+
+.imgContainer {
+  overflow: hidden;
+  height: 6rem; 
+}

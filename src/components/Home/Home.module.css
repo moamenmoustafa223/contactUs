@@ -1,0 +1,33 @@
+:root {
+    --layout: 12;
+  }
+  
+  .sidebar {
+    --column: 2;
+    width: 85vw ;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    transition: left 200ms;
+    z-index: 99;
+  }
+  
+  .sidebar-mini {
+    width: 85vw ;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: -85%;
+    z-index: 99;
+    transition: left 350ms;
+  }
+  
+  .sidebar-mini i {
+    margin: 0 !important;
+  }
+  
+  .content {
+    padding: 15px;
+    flex-grow: 1;
+  }

@@ -1,0 +1,31 @@
+.SearchBox input::placeholder{
+  color: #8F8F8F;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+.SearchBox input{
+  border: 2px solid #ececec;
+  color: #111;
+  font-size: 1.1rem;
+  
+}
+.SearchBox input:focus{
+  box-shadow: none !important;
+  border: 2px solid #D49F15;
+}
+
+.SearchBox button{
+font-size: 1.1rem;
+text-transform: uppercase;
+}
+.icon{
+  display: none;
+}
+@media (max-width: 768px) {
+  .icon{
+    display: block;
+  }
+  .text{
+    display: none;
+  }
+}

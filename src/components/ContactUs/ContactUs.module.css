@@ -1,0 +1,53 @@
+.imgContainer{
+    height: 40vh;
+    background-image: url("../../assets/images/pageHeader.jfif");
+    background-position: center;
+    background-size: cover;
+  
+}
+.imgLayer{
+    background: linear-gradient(273deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 132.79%);
+
+}
+.imgContent{
+    opacity: 1;
+}
+.imgContent h2{
+    color: #FFF;
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+
+}
+.imgContent p{
+    color: #D49F15;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 4.50644rem; 
+    letter-spacing: -0.0175rem;
+    text-transform: uppercase;
+
+}
+.mainTitle{
+    color: #000;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.mainTitle+p{
+    color: #CE9A14;
+font-size: .925rem;
+font-weight: 400;
+text-transform: uppercase;
+}
+.item h4{
+    color: #000;
+font-size: 1.25rem;
+font-weight: 700;
+}
+.item p{
+    color: #474747;
+    font-size: 1rem;
+    
+}

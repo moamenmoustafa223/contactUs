@@ -1,0 +1,21 @@
+.btnCustom{
+    color: #D49F15;
+    cursor: pointer;
+}
+.mainTitle{
+    color: #111;
+    font-size: 1.75rem;
+    font-weight: 700;
+    
+    text-transform: uppercase;
+
+}
+.mainTitle+p{
+    color: #676767;
+  
+    font-size: 0.8rem;
+    
+    font-weight: 400;
+   
+    text-transform: uppercase;
+}

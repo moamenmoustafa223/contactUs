@@ -1,0 +1,55 @@
+.signCardContent{
+    background-color: #FFF9E9;
+}
+.signCardContent h3{
+    color: #D49F15;
+font-size: 2rem;
+font-weight: 700;
+line-height: 2.5625rem; 
+letter-spacing: -0.06rem;
+text-transform: uppercase;
+}
+.signCardContent p{
+    color: #7A5B08;
+font-size: 1rem;
+font-weight: 400;
+text-transform: uppercase;
+}
+
+.signCardContent a{
+    color: #D49F15;
+    text-transform: uppercase;
+    
+    font-size: 1.45831rem;
+    
+    font-weight: 500;
+}
+.joinCardContent{
+
+    background-color: #F8F8F8;
+}
+.joinCardContent h3{
+ 
+    color: #111;
+font-size: 2rem;
+font-weight: 700;
+line-height: 2.5625rem; 
+letter-spacing: -0.06rem;
+text-transform: uppercase;
+}
+.joinCardContent p{
+    color: #000;
+
+font-size: 1rem;
+font-weight: 400;
+text-transform: uppercase;
+}
+.joinCardContent a{
+    color: #111;
+text-transform: uppercase;
+
+font-size: 1.45831rem;
+
+font-weight: 500;
+
+}

@@ -1,0 +1,20 @@
+.Banner {
+  height: 15rem;
+
+object-fit: cover;
+border-radius: 1.3rem;
+overflow: hidden;
+
+}
+.Banner img{
+    border-radius: 1.2rem;
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .Banner {
+    height: 13rem;
+  }
+}

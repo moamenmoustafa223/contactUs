@@ -1,0 +1,40 @@
+.features{
+    color: #B2B2B2;
+    font-size: 0.875rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.featuresProb{
+    color: #D49F15;
+    
+font-size: 1.175rem;
+font-weight: 800;
+}
+
+.currency{
+    font-size: .925rem;
+    color: #959595;
+    font-weight: 700;
+    
+}
+.price{
+    color: #D49F15;
+
+font-size: 1.4rem;
+
+font-weight: 800;
+
+}
+.discountPrice{
+    font-size: .925rem;
+ 
+}
+.discountPrice span::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #c10707;
+    top: 50%;
+    transform: translateY(-50%);
+}

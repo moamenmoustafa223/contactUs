@@ -1,0 +1,79 @@
+.navCustom{
+   background-color: #fff;
+   
+    }
+    .logoName{
+        color:  #000;
+        font-size: 1.5rem;
+        font-weight: 800;
+       
+        text-transform: uppercase;
+    }
+    .navCustom p{
+        color: #D49F15;
+font-size: 0.75rem;
+font-weight: 400;
+
+letter-spacing: -0.015rem;
+text-transform: uppercase;
+      
+    }
+    
+    .navlinkCustom{
+    
+    color: #000;
+    text-wrap: nowrap;
+    font-size: .9rem;
+    line-height: 1.51488rem;
+    
+    }
+    .navlinkCustom:hover{
+        color: #D49F15;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.51488rem;
+        }
+
+    .navlinkCustom.active{
+    position: relative;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.51488rem;
+    
+    }
+    .navlinkCustom.active::before{
+        content:"";
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background-color: #D49F15;
+      left: 0;
+      bottom: 0;
+    }
+    .navCustom img{
+        height: 56px;
+    }
+    /* .navbarnavCustom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+    
+    } */
+    .nav-custom{
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    
+    }
+
+   
+    @media (max-width: 768px) {
+        .navCustom img{
+            height: 36px;
+        }
+
+      }

@@ -1,0 +1,8 @@
+.fav{
+    cursor: pointer;  
+    border-radius: 8px;
+}
+
+.fav:hover {
+    background-color: #fff6de;
+}

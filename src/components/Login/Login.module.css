@@ -1,0 +1,55 @@
+.googleLoginButton {
+ 
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .googleLoginButton:hover {
+    background-color: #e5e5e5;
+  }
+  .facebookLoginButton {
+    
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #1877f2;
+    border: none;
+    border-radius: 4px;
+    cursor: not-allowed !important;
+    transition: background-color 0.3s ease;
+  }
+  
+  .facebookLoginButton:hover {
+    background-color: #155a9e;
+  }
+
+  .mainTitle{
+    color: #111;
+    font-size: 1.7rem;
+    font-weight: 700;
+   
+    text-transform: uppercase;
+
+}
+.mainTitle+p{
+    color: #a7a7a7;
+  
+    font-size: 0.875rem;
+    
+    font-weight: 400;
+   
+    text-transform: uppercase;
+}
+.loginContainer{
+  min-height: calc(100vh - 120px);
+  background-color: rgb(255, 255, 255) !important;
+}

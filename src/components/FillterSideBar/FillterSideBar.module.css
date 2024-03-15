@@ -1,0 +1,106 @@
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .checkboxWrapper input[type=checkbox] {
+    --active: #D49F15;
+    --active-inner: #fff;
+    --border: #BBC1E1;
+    --border-hover: #dcbb6a;
+    --background: #fff;
+    --disabled: #dbc48d;
+    --disabled-inner: #ddc898;
+    height: 19px;
+    width: 19px;
+    outline: none;
+    cursor: pointer;
+    border: 2px solid var( var(--border));
+    background: var( var(--background));
+  }
+  .checkboxWrapper input[type=checkbox]:checked {
+    background-color: #D49F15 !important;
+    border-color: #dcbb6a !important;
+  }
+  .checkboxWrapper input[type=checkbox]:focus {
+    border-color: #dcbb6a !important;
+  
+    box-shadow:none !important;
+  }
+  .checkboxWrapper input[type=checkbox]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+  .checkboxWrapper input[type=checkbox]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+  .checkboxWrapper input[type=checkbox]:disabled + label {
+    cursor: not-allowed;
+  }
+  .checkboxWrapper input[type=checkbox]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+  .checkboxWrapper input[type=checkbox]:focus {
+    box-shadow: 0 0 0 var(--focus);
+  }
+  .checkboxWrapper input[type=checkbox]:not(.switch) {
+    width: 19px;
+  }
+  .checkboxWrapper input[type=checkbox]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+  .checkboxWrapper input[type=checkbox]:not(.switch):checked {
+    --o: 1;
+  }
+
+    .checkboxWrapper input[type=checkbox] + label {
+      display: inline-block;
+      vertical-align: middle;
+      color: #000;
+      text-align: justify;
+      font-size:16px;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height:  1.875rem ;
+     
+      cursor: pointer;
+      margin-inline-start: 12px;
+    
+    }
+  
+    .checkboxWrapper input[type=checkbox]:not(.switch) {
+      border-radius: 7px;
+    }
+  
+  }
+  
+  .checkboxContainer h4{
+    color: #B2B2B2;
+    text-transform: uppercase;
+font-size: 0.975rem;
+font-weight: 500;
+
+  }
+  .buttonContianer{
+    left: 0;
+    right: 0;
+    padding-block: .5rem;
+    box-shadow: 0px -3px 2px 0px rgba(218, 218, 218, 0.1);
+    -webkit-box-shadow: 0px -3px 2px 0px rgba(218, 218, 218, 0.1);
+    -moz-box-shadow: 0px -3px 2px 0px rgba(218, 218, 218, 0.1);
+    border-radius: 12px;
+   
+  }
+
+  
+ 
+  @media (max-width: 768px) {
+  
+    .FillterSideBarWrapper{
+      height: 90vh;
+     
+    }
+    .FillterSideBarContainer{
+    
+      height: 100%;
+     
+    }
+}

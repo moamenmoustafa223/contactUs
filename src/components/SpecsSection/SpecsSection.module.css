@@ -1,0 +1,9 @@
+.options{
+    color: #000000;
+    font-size: 0.9rem;
+    
+    padding: .5rem .6rem;
+    
+    border-radius: 0.25rem;
+    border: 2px solid rgba(220, 220, 220, 1);
+    }

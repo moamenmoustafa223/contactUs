@@ -1,0 +1,17 @@
+
+.btnCustom{
+    color: #D49F15;
+    cursor: pointer;
+  }
+  .btnFilled{
+    border: #D49F15 solid 2px;
+    color: #D49F15;
+    cursor: pointer;
+  }
+  .btnFilled:hover{
+    background-color:#D49F15 ;
+    color: white;
+  }
+  .wrap{
+    text-wrap: nowrap;
+  }

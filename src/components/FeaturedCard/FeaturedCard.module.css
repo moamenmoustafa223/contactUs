@@ -1,0 +1,107 @@
+
+.cardCustom{
+    border: #ECECEC solid 2px !important;
+    border-radius: 1.3rem !important;
+    min-height: 29rem;
+    width: 21rem;
+    position: relative;
+    overflow: hidden;
+}
+.cardCustom .badge {
+    position: absolute;
+    height: 1.5rem;
+    width: 10rem;
+    color: #fff;
+    background: #E8152A;
+    transform: rotate(-45deg);
+    text-align: center;
+    top:1.5rem;
+    left: -3rem;
+    z-index: 5;
+}
+.cardCustom:hover{
+    border: #D49F15 solid 2px !important;
+}
+.cardHeader{
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+.fav{
+    background-color:white;
+
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.fav:hover i{
+    
+    transform: scale(1.12) 
+}
+
+.cardTitle{
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.vendorName{
+
+    color: #8E8E8E;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.divider{
+    border-top: 2px solid #ECECEC;
+    border-bottom: 2px solid #ECECEC;
+}
+
+.imgLayer{
+    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    opacity: 0;
+    border-start-start-radius: 1.2rem;
+    border-start-end-radius: 1.2rem;
+}
+.imgContainer {
+    
+   width: 100%;
+   height: 12rem;
+   }
+   .imgContainer img {
+     width: 100%; 
+     height: 100%;
+     object-fit: cover; 
+   }
+.imgContainer:hover .imgLayer{
+    opacity: 1;
+}
+.imgContainer .cardImg{
+    
+    border-start-start-radius: 1.2rem;
+    border-start-end-radius: 1.2rem;
+ 
+}
+
+.btnCustom{
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.btnCustom:hover{
+    color: #D49F15;
+
+}
+@media (max-width: 768px) {
+    .cardCustom{
+        width: 21.5rem;
+    }
+  }
+
+   

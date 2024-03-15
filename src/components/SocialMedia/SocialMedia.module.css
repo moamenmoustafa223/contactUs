@@ -1,0 +1,14 @@
+.navlinkCustom{
+    
+    color: #fff;
+    text-wrap: nowrap;
+    font-size: 1rem;
+    line-height: 1.51488rem;
+    
+    }
+    .navlinkCustom:hover{
+      
+        font-weight: 700;
+      
+        color: #D49F15;
+        }

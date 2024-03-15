@@ -1,0 +1,33 @@
+.hero{
+  height: 60vh;
+  
+}
+
+.homeContent{
+    width: fit-content;
+ 
+}
+.homeContent h3{
+    color: #D49F15;
+font-size: 1.50125rem;
+
+font-weight: 800;
+line-height: 3.50644rem; 
+letter-spacing: -0.03rem;
+text-transform: uppercase;
+}
+.homeContent h1{
+    color: #000;
+font-size: 3rem;
+font-weight: 800;
+line-height: 3.71475rem;
+letter-spacing: -0.09rem;
+}
+.homeContent p{
+    color: #F1F1F1;
+font-size: 1rem;
+font-weight: 500;
+line-height:  1.8rem ;
+}
+
+

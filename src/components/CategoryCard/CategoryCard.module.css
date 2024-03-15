@@ -1,0 +1,36 @@
+.categoryCard {
+  border: #ECECEC solid 2px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.categoryCard img {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: 100%; /* Ensure the image takes the full height of its container */
+  object-fit: contain; /* Maintain aspect ratio while covering the container */
+  margin-bottom: 1rem; /* Add some space below the image */
+}
+
+.categoryCard:hover {
+  border: #D49F15 solid 2px;
+}
+
+.categoryName {
+  color: #939393;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.categoryCard:hover .categoryName {
+  color: #D49F15;
+  font-weight: 700;
+}
+.imgContainer{
+  overflow: hidden;
+  height: 8rem; 
+}

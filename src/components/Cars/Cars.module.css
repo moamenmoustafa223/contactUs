@@ -1,0 +1,124 @@
+
+.divider{
+    border-top: 2px solid #ECECEC;
+    border-bottom: 2px solid #ECECEC;
+}
+.cardTitle{
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding-inline-end: 26px;
+}
+.vendorName{
+
+    color: #8E8E8E;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.imgLayer{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    opacity: 0;
+}
+.imgContainer:hover .imgLayer{
+    opacity: 1;
+}
+.cardHeader{
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+}
+.fav{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer; 
+    background-color: #fff;
+}
+
+.fav:hover i{
+    transform: scale(1.12);
+}
+
+
+.imgContainer {
+    height: 18rem;
+
+    overflow: hidden;
+
+}
+
+   .imgContainer img {
+     width: 100%; 
+     height: 100%;
+     object-fit: cover; 
+   }
+
+   .cardCustom{
+    border: #ECECEC solid 2px !important;
+    border-radius: 16px !important;
+   min-height: 17.5rem;
+   overflow: hidden;
+   position: relative;
+}
+.cardCustom .badge {
+    position: absolute;
+    height: 1.5rem;
+    width: 10rem;
+    color: #fff;
+    background: #E8152A;
+    transform: rotate(-45deg);
+    text-align: center;
+    top:1.5rem;
+    left: -3rem;
+    z-index: 5;
+}
+.cardCustom:hover{
+    border: #D49F15 solid 2px !important;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.btnCustom{
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.btnCustom:hover{
+    color: #D49F15;
+
+}
+
+
+
+    .mainImg{
+        border-start-start-radius: 16px;
+        border-bottom-left-radius: 16px;
+    }
+@media (max-width: 991px) {
+    .fav{
+        background-color: white;
+        border: none;
+   
+    }
+    .mainImg{
+        border-start-start-radius: 16px;
+        border-start-end-radius: 16px;
+        border-bottom-left-radius: 0px;
+        
+          }
+          .cardTitle{
+            padding-inline-end: 0px;
+        }
+        .cardCustom{
+            min-height: 30rem;
+            width: 24.3rem;
+        }
+        .imgContainer {
+            height: 13rem;
+            overflow: hidden;
+        
+        }
+   
+}
