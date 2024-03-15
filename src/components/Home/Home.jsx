@@ -10,6 +10,8 @@ import GoogleOAuthSuccessRedirect from '../GoogleOAuthSuccessRedirect/GoogleOAut
 import { UserContext } from '../../context/UserContext'
 import { useFavoriteContext } from '../../context/FavoriteContext'
 import LocationInput from '../LocationInput/LocationInput'
+import ListYourCarsPage from '../../pages/ListYourCarsPage'
+import ContactUsPage from '../../pages/ContactUsPage'
 
 const Home = () => {
 
@@ -22,10 +24,10 @@ const Home = () => {
     
     const setData = async () => {
         try {
-            const sections = await listSections()
-            const ads = await listAds();
-            setSections(sections)
-            setAds(ads)
+            // const sections = await listSections()
+            // const ads = await listAds();
+            // setSections(sections)
+            // setAds(ads)
         } catch (err) {
             console.log(err);
         } finally {
@@ -34,11 +36,11 @@ const Home = () => {
     }
     useEffect(() => {
         setData().catch((err) => console.log(err))
-        if(token){
-        getUserFavorite(userInfo.id,
-            token,
-            setFavorites);
-    }
+    //     if(token){
+    //     getUserFavorite(userInfo.id,
+    //         token,
+    //         setFavorites);
+    // }
     }, [])
 
     return (
@@ -49,11 +51,10 @@ const Home = () => {
                 <Loader />
             ) : (
                 
-                <div className='container' style={{minHeight:"100vh",paddingTop:"100px"}}>
+                <div style={{minHeight:"100vh"}}>
                     {/* <HeroSection /> */}
                     {/* <GoogleOAuthSuccessRedirect/> */}
-                 
-                   <LocationInput/>
+               <ContactUsPage/>
                 </div>
             )}
         </>

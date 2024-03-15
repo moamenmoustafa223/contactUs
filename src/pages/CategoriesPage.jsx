@@ -27,7 +27,7 @@ export const CategoriesPage = () => {
     
   return (
     <>
-    <ReactHelmet title={"CarWins | Categories"}/>
+    <ReactHelmet title={"Borame | Categories"}/>
   <div className="container py-5" style={{minHeight:"100vh"}}>
                 {/* <Link className="btnCustom mb-4 d-inline-block" to={`/`}><i className="fa-solid fa-arrow-left-long me-2"></i> Back to home
                 </Link> */}

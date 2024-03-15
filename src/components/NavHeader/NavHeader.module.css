@@ -1,6 +1,6 @@
 
 .navContainer{
-    background-color: #D49F15;
+    background-color: var(--primary-color);
     height: 2rem;
 }
 .navlinkCustom{

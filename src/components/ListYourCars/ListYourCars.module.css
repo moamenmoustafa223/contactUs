@@ -20,7 +20,7 @@
 
 }
 .imgContent p{
-    color: #D49F15;
+    color: var(--primary-color);
     text-align: center;
     font-size: 0.875rem;
     font-weight: 600;

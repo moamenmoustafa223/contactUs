@@ -72,7 +72,7 @@ const NavBar = () => {
               } */}
              
               <div className="navSearchBox">
-              <SearchBox/>
+              {/* <SearchBox/> */}
               </div>
       
 

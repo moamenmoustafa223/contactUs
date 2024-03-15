@@ -63,7 +63,7 @@ export default function CarsPage() {
       };
     return (
         <>
-            <ReactHelmet title={"CarWins | All Cars"} />
+            <ReactHelmet title={"Borame | All Cars"} />
             <div className="container " style={{minHeight:"100vh"}}>
                 <div className="">
                     <>

@@ -10,7 +10,7 @@
         text-transform: uppercase;
     }
     .navCustom p{
-        color: #D49F15;
+        color: var(--primary-color);
 font-size: 0.75rem;
 font-weight: 400;
 
@@ -28,7 +28,7 @@ text-transform: uppercase;
     
     }
     .navlinkCustom:hover{
-        color: #D49F15;
+        color: var(--primary-color);
         font-weight: 700;
         font-size: 1rem;
         line-height: 1.51488rem;
@@ -46,7 +46,7 @@ text-transform: uppercase;
       position: absolute;
       width: 50%;
       height: 3px;
-      background-color: #D49F15;
+      background-color: var(--primary-color);
       left: 0;
       bottom: 0;
     }

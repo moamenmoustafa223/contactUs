@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --primary-color: #339af0; /* Replace with your desired primary color */
+}
 
 @font-face {
   font-family: "CircularStd-Medium";
@@ -137,7 +140,7 @@ html {
  }
  
 .btnCustom{
-  color: #D49F15;
+  color: var(--primary-color);
 
 font-size: 1.15rem;
 
@@ -146,8 +149,8 @@ font-weight: 500;
   cursor: pointer;
 }
 .btnOutLine{
-  border: #D49F15 solid 2px;
-  color: #D49F15;
+  border: var(--primary-color) solid 2px;
+  color: var(--primary-color);
   font-size: 1rem;
   padding-inline: 2.5rem;
   padding-block: .65rem;
@@ -159,9 +162,9 @@ font-weight: 500;
 
 }
 .btnFilled{
-  border: #D49F15 solid 2px;
+  border: var(--primary-color) solid 2px;
   color: #fff;
-  background-color:#D49F15 ;
+  background-color:var(--primary-color) ;
   font-size: 1rem;
   padding-inline: 2.5rem;
   padding-block: .65rem;
@@ -173,16 +176,16 @@ font-weight: 500;
   color: #fff;
 }
 .mainBG{
-  background-color: #D49F15 !important;
+  background-color: var(--primary-color) !important;
 }
 .secBG{
   background-color: #e1e1e1 !important;
 }
 .mainBorder{
-  border: #D49F15 solid 1px !important;
+  border: var(--primary-color) solid 1px !important;
 }
 .mainColor{
-  color: #D49F15;
+  color: var(--primary-color);
 }
 .secColor{
   color: #808080 !important;
@@ -204,7 +207,7 @@ font-weight: 500;
 
 .pagination button {
   background-color: #f8f9fa;
-  border: 1.5px solid #D49F15;
+  border: 1.5px solid var(--primary-color);
   color: #495057;
   padding: 8px 16px;
   margin: 0 12px;
@@ -219,7 +222,7 @@ font-weight: 500;
 }
 
 .pagination button.active {
-  background-color: #D49F15;
+  background-color: var(--primary-color);
   color: #fff;
 }
 .pageHeight{

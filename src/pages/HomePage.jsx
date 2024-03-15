@@ -5,7 +5,7 @@ import OrganizationSchema from '../components/OrganizationSchema/OrganizationSch
 export default function HomePage() {
   return (
     <>
-      <ReactHelmet title={'CarWins | Home'} />
+      <ReactHelmet title={'Borame | Home'} />
       <Home />
       <OrganizationSchema />
     </>

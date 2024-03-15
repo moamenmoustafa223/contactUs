@@ -5,7 +5,7 @@ import AMPInvestWithUs from '../components/InvestWithUs/AMPInvestWithUs ';
 export default function InvestWithUsPage() {
   return (
     <>
-      <ReactHelmet title={'CarWins | Invest With Us'} />
+      <ReactHelmet title={'Borame | Invest With Us'} />
       <div style={{minHeight:"100vh" }}>  
    <AMPInvestWithUs/>
 

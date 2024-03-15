@@ -4,7 +4,7 @@ import ContactUs from '../components/ContactUs/ContactUs';
 export default function ContactUsPage() {
   return (
     <>
-      <ReactHelmet title={'CarWins | Contact Us'} />
+      <ReactHelmet title={'Borame | Contact Us'} />
       <div style={{minHeight:"100vh" }}>  
    <ContactUs/>
 

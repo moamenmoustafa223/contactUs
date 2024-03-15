@@ -1,5 +1,5 @@
 .footer{
-    border-top: solid 3px #D49F15 ;
+    border-top: solid 3px var(--primary-color) ;
 }
 .navlinkCustom{
     
@@ -11,7 +11,7 @@
     }
     .navlinkCustom:hover{
     
-        color: #D49F15;
+        color: var(--primary-color);
         }
         .divider{
             
@@ -23,8 +23,8 @@
             gap: 0.625rem;     
             padding: .8rem 1.2rem;
             border-radius: 6.25rem;
-            border: 4px solid #88660F;
-            background: #D49F15;
+            border: 4px solid #67c8e9;
+            background: var(--primary-color);
             color: #000;
             font-size: .9rem;
             font-weight: 600;
@@ -32,7 +32,9 @@
             text-transform: uppercase;
         }
         .primary:hover{
-            background: #a77c11;
+            background: #2d8ad6;
+           
+
           }
         .secondary{
             display: flex;

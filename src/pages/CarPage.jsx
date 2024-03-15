@@ -29,7 +29,7 @@ export default function CarPage() {
     }, [id]);
     return (
         <>
-       <ReactHelmet title={"CarWins | Car Details"}/>
+       <ReactHelmet title={"Borame | Car Details"}/>
        <div className="contentArea">
        <NavHeader/>
       <NavBar />

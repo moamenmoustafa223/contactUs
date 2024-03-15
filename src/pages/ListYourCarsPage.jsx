@@ -5,7 +5,7 @@ import ListYourCars from '../components/ListYourCars/ListYourCars';
 export default function ListYourCarsPage() {
   return (
     <>
-      <ReactHelmet title={'CarWins | List Your Cars'} />
+      <ReactHelmet title={'Borame | Contact Us'} />
       <div style={{minHeight:"100vh" }}>  
    <ListYourCars/>
 
