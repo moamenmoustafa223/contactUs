@@ -40,6 +40,7 @@ const ContactUs = () => {
       setOtherDamage('');
     }
   };
+  
   const getCurrentLocation = () => {
     setLocationLoading(true);
     if (navigator.geolocation) {
@@ -48,15 +49,20 @@ const ContactUs = () => {
           setLocationError(null);
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
-
+  
           fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
-            .then(response => response.json())
+            .then(response => {
+              if (!response.ok) {
+                throw new Error('Error fetching address');
+              }
+              return response.json();
+            })
             .then(data => {
               setAddress(data.display_name);
               setLocationLoading(false);
             })
             .catch(error => {
-              setLocationError("Error fetching address");
+              setLocationError(error.message);
               setLocationLoading(false);
               console.error('Error fetching address:', error);
             });
@@ -72,6 +78,7 @@ const ContactUs = () => {
       setLocationLoading(false);
     }
   };
+  
 
   if (state.succeeded) {
     return (
@@ -104,23 +111,25 @@ const ContactUs = () => {
         <div className="col-md-7">
           <div className="mb-4">
           <h3 className={`${ContactUsStyles.mainTitle} mb-2`}>contact us</h3>
-          <p>Rent the perfect car for your next adventure</p>
+          <p className='fw-bold'>Rent the perfect car for your next adventure</p>
           </div>
           <div className={`${ContactUsStyles.item} mb-4`}>
           <img src={location} className='mb-1' alt="" />
         <h4 className='mb-2'>Address</h4>
-        <p className='pe-md-5'>Office 312 - Third floor- Mohammad Bin Abdulrahman Alashram Building - Garhoud - Dubai 
+        <p className='pe-md-5'>Office 1410 - IT Plaza - Silicon Oasis - Dubai 
         - United Arab Emirates. <span className='mainColor text-decoration-underline fw-bold'><Link to={"https://maps.app.goo.gl/ZCwCNUWimpxCKbQu9?g_st=ic"} target='_blank'>Get Directions</Link></span></p>
           </div>
           <div className={`${ContactUsStyles.item} mb-4`}>
         <i className="fa-regular fa-clock fs-5 mb-1"></i>
         <h4 className='mb-2'>Work-time</h4>
-        <p>Daily from <span className='fw-bolder'>Monday</span> to <span className='fw-bolder'>Friday</span> from <span className='fw-bolder'>09:00 AM</span> to <span className='fw-bolder'>06:00 PM</span> </p>
+        <p>Daily from <span className='fw-bolder'>Saturday</span> to <span className='fw-bolder'>Thursday</span> from <span className='fw-bolder'>08:00 AM</span> to <span className='fw-bolder'>04:00 PM</span> </p>
           </div>
           <div className={`${ContactUsStyles.item} mb-4`}>
-         <i className="fa-solid fa-phone fs-5 mb-1"></i>
-        <h4 className='mb-2'>Contact Number</h4>
-        <p>+971527711325</p>
+         <i className="fa-regular fa-envelope fs-5 mb-1"></i>
+       
+        <h4 className='mb-2'>Email Us</h4>
+     
+        <a href="mailto:info@borame.ae">info@borame.ae</a>
           </div>
         </div>
         <div className="col-md-5">
@@ -153,14 +162,15 @@ const ContactUs = () => {
                   <ValidationError prefix="PhoneNumber" field="PhoneNumber" errors={state.errors} />
                 </div>
                 <div className="mb-3">
-                  <label className='mb-2' htmlFor="email">Location<span className='text-danger'>*</span></label>
-                  <div className='d-flex jusify-content-center align-items-center'>
-                    <input type="text" id="email" required aria-label="inquiry" name="Email" className="form-control px-2 py-2 rounded-3 me-2" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Enter your location" />
-                    <button className='btnCustom btnFilled fw-bold rounded-3 px-2 py-2 text-nowrap' disabled={locationLoading} onClick={getCurrentLocation}>{locationLoading ? 'Loading...' : 'Get Current Location'}</button>
-                  </div>
-                  <ValidationError prefix="Email" field="Email" errors={state.errors} />
-                  {locationError && <p className="text-danger">{locationError}</p>}
-                </div>
+    <label className='mb-2' htmlFor="email">Location<span className='text-danger'>*</span></label>
+    <div className='d-flex jusify-content-center align-items-center'>
+      <input type="text" id="email" required aria-label="inquiry" name="Email" className="form-control px-2 py-2 rounded-3 me-2" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Enter your location" />
+      <button className='btnCustom btnFilled fw-bold rounded-3 px-2 py-2 text-nowrap' disabled={locationLoading} onClick={getCurrentLocation}>Get Current Location</button>
+    </div>
+    <ValidationError prefix="Email" field="Email" errors={state.errors} />
+    {locationError && <p className="text-danger">{locationError}</p>}
+  </div>
+
                 <div className="mb-3">
                   <div className="row">
                     <div className="col-6">
@@ -211,29 +221,33 @@ const ContactUs = () => {
                 </div>
                 <div className="mb-4">
       <label className='mb-2' htmlFor="destination">Where do you want to go?<span className='text-danger'>*</span></label>
-      <div>
+<div className='d-flex justify-content-between'>
+<div>
         <input type="radio" id="nearestGarage" name="destination" value="Nearest garage" checked={destination === 'Nearest garage'} onChange={handleDestinationChange} />
         <label className='ms-2' htmlFor="nearestGarage">Nearest garage</label>
       </div>
       <div>
         <input type="radio" id="knownGarage" name="destination" value="Garage I know" checked={destination === 'Garage I know'} onChange={handleDestinationChange} />
         <label  className='ms-2' htmlFor="knownGarage">Garage I know</label>
-        {destination === 'Garage I know' && (
-          <div className="ms-3 my-2">
-            <label className='mb-2' htmlFor="garageLocation">Garage Location<span className='text-danger'>*</span></label>
-            <input type="text" id="garageLocation" required className="form-control px-2 py-2 rounded-3" name="garageLocation" value={garageLocation} onChange={(e) => setGarageLocation(e.target.value)} />
-          </div>
-        )}
+        
       </div>
       <div>
         <input type="radio" id="registrationOffice" name="destination" value="Registration office" checked={destination === 'Registration office'} onChange={handleDestinationChange} />
         <label  className='ms-2' htmlFor="registrationOffice">Registration office</label>
       </div>
+</div>
+     
+      {destination === 'Garage I know' && (
+          <div className="ms-3 my-2">
+            <label className='mb-2' htmlFor="garageLocation">Garage Location<span className='text-danger'>*</span></label>
+            <input type="text" id="garageLocation" required className="form-control px-2 py-2 rounded-3" name="garageLocation" value={garageLocation} onChange={(e) => setGarageLocation(e.target.value)} />
+          </div>
+        )}
       <ValidationError prefix="destination" field="destination" errors={state.errors} />
     </div>
 
     <div className="mb-4">
-      {/* <label className='mb-2'>When do you want to request?<span className='text-danger'>*</span></label> */}
+      <label className='mb-2'>When do you want to request?<span className='text-danger'>*</span></label>
       <div className={`${ContactUsStyles.radiobuttonContainer} d-flex justify-content-around align-items-center `}>
       <div>
         <input type="radio" className={`${ContactUsStyles.btnCheck} btn-check `} id="requestNow" name="requestType" value="Request Now" checked={requestType === 'Request Now'} onChange={handleRequestTypeChange} />

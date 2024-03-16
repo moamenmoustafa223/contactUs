@@ -20,7 +20,7 @@
 
 }
 .imgContent p{
-    color: var(--primary-color);
+    color: var(--secondry-color);
     text-align: center;
     font-size: 0.875rem;
     font-weight: 600;
@@ -36,7 +36,7 @@
     text-transform: uppercase;
 }
 .mainTitle+p{
-    color: #CE9A14;
+    color:var(--primary-color);
 font-size: .925rem;
 font-weight: 400;
 text-transform: uppercase;
@@ -60,17 +60,17 @@ font-weight: 700;
     filter: grayscale(90%);
   }
   .radiobuttonContainer .radioBtnOutlineCustom:hover{
-    border: 2px solid var(--primary-color) !important;
+    border: 2px solid var(--secondry-color) !important;
   
-    color: var(--primary-color) !important;
+    color: var(--secondry-color) !important;
   }
   .radiobuttonContainer .radioBtnOutlineCustom:hover img{
     filter: grayscale(0%);
   }
   .radiobuttonContainer div .btnCheck:checked+.radioBtnOutlineCustom{
-    color: white !important;
-    border: 2px solid var(--primary-color) !important;
-    background-color: var(--primary-color);
+    color: var(--secondry-color) !important;
+    border: 2px solid var(--secondry-color) !important;
+    background-color: transparent;
   }
   .radiobuttonContainer div .btnCheck:checked+.radioBtnOutlineCustom img{
     filter: grayscale(0%);

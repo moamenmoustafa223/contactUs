@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-  --primary-color: #339af0; /* Replace with your desired primary color */
+  --primary-color: #339af0; 
+  --primary-color-hover: #0985eb; 
+  --secondry-color: #f08933; 
 }
 
 @font-face {
@@ -157,7 +159,7 @@ font-weight: 500;
   cursor: pointer;
 }
 .btnOutLine:hover{
-  background-color:#ba8704 ;
+  background-color: var(--primary-color) ;
   color: white;
 
 }
@@ -172,7 +174,7 @@ font-weight: 500;
 }
 .btnFilled:hover{
 
-  background-color:#ba8704 ;
+  background-color: var(--primary-color-hover) ;
   color: #fff;
 }
 .mainBG{
