@@ -129,7 +129,7 @@ const ContactUs = () => {
        
         <h4 className='mb-2'>Email Us</h4>
      
-        <a href="mailto:info@borame.ae">info@borame.ae</a>
+        <a className='mainColor' href="mailto:info@borame.ae">info@borame.ae</a>
           </div>
         </div>
         <div className="col-md-5">
@@ -165,7 +165,7 @@ const ContactUs = () => {
     <label className='mb-2' htmlFor="email">Location<span className='text-danger'>*</span></label>
     <div className='d-flex jusify-content-center align-items-center'>
       <input type="text" id="email" required aria-label="inquiry" name="Email" className="form-control px-2 py-2 rounded-3 me-2" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Enter your location" />
-      <button className='btnCustom btnFilled fw-bold rounded-3 px-2 py-2 text-nowrap' disabled={locationLoading} onClick={getCurrentLocation}>Get Current Location</button>
+      <button className='btnCustom btnOutLine fw-bold rounded-3 px-2 py-2 text-nowrap' disabled={locationLoading} onClick={getCurrentLocation}>Get Current Location</button>
     </div>
     <ValidationError prefix="Email" field="Email" errors={state.errors} />
     {locationError && <p className="text-danger">{locationError}</p>}
