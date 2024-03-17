@@ -4,7 +4,7 @@ import location from "../../assets/images/location.png"
 import { Link } from 'react-router-dom'
 import ContactUsStyles from "./ContactUs.module.css"
 const ContactUs = () => {
-  const [state, handleSubmit] = useForm("xeqyqbae");
+  const [state, handleSubmit] = useForm("xzbnazap");
   const [locationLoading, setLocationLoading] = useState(false);
   const [locationError, setLocationError] = useState(null);
   const [address, setAddress] = useState('');
@@ -22,6 +22,7 @@ const ContactUs = () => {
   const handleDateTimeChange = (event) => {
     setDateTime(event.target.value);
   };
+
   const handleDestinationChange = (event) => {
     const value = event.target.value;
     setDestination(value);
@@ -31,6 +32,7 @@ const ContactUs = () => {
       setGarageLocation('');
     }
   };
+
   const handleDamageChange = (event) => {
     const value = event.target.value;
     setDamageType(value);
@@ -40,7 +42,7 @@ const ContactUs = () => {
       setOtherDamage('');
     }
   };
-  
+
   const getCurrentLocation = () => {
     setLocationLoading(true);
     if (navigator.geolocation) {
@@ -49,7 +51,7 @@ const ContactUs = () => {
           setLocationError(null);
           const latitude = position.coords.latitude;
           const longitude = position.coords.longitude;
-  
+
           fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`)
             .then(response => {
               if (!response.ok) {
@@ -78,7 +80,10 @@ const ContactUs = () => {
       setLocationLoading(false);
     }
   };
-  
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (state.succeeded) {
     return (
@@ -87,10 +92,6 @@ const ContactUs = () => {
       </div>
     );
   }
-  useEffect(() => {
-   
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
     <div className={`${ContactUsStyles.imgContainer} mb-3 `}>
@@ -162,19 +163,19 @@ const ContactUs = () => {
                   <ValidationError prefix="PhoneNumber" field="PhoneNumber" errors={state.errors} />
                 </div>
                 <div className="mb-3">
-    <label className='mb-2' htmlFor="email">Location<span className='text-danger'>*</span></label>
+    <label className='mb-2' htmlFor="location">Location<span className='text-danger'>*</span></label>
     <div className='d-flex jusify-content-center align-items-center'>
-      <input type="text" id="email" required aria-label="inquiry" name="Email" className="form-control px-2 py-2 rounded-3 me-2" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Enter your location" />
+      <input type="text" id="location" required aria-label="inquiry" name="Location" className="form-control px-2 py-2 rounded-3 me-2" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="Enter your location" />
       <button className='btnCustom btnOutLine fw-bold rounded-3 px-2 py-2 text-nowrap' disabled={locationLoading} onClick={getCurrentLocation}>Get Current Location</button>
     </div>
-    <ValidationError prefix="Email" field="Email" errors={state.errors} />
+    <ValidationError prefix="Location" field="Location" errors={state.errors} />
     {locationError && <p className="text-danger">{locationError}</p>}
   </div>
 
                 <div className="mb-3">
                   <div className="row">
                     <div className="col-6">
-                      <label className="mb-1" htmlFor="brand">Car Type<span className="text-danger">*</span>{' '}</label>
+                      <label className="mb-1" htmlFor="Type">Car Type<span className="text-danger">*</span>{' '}</label>
                       <input
                         type="text"
                         name="carType"
@@ -183,7 +184,7 @@ const ContactUs = () => {
                         required
                         aria-label="Type"
                       />
-                      <ValidationError prefix="CarBrand" field="carBrand" errors={state.errors} />
+                      <ValidationError prefix="carType" field="carType" errors={state.errors} />
                     </div>
                     <div className="col-6">
                       <label className="mb-1" htmlFor="model">Car Model<span className="text-danger">*</span>{' '}</label>
@@ -195,7 +196,7 @@ const ContactUs = () => {
                         required
                         aria-label="model"
                       />
-                      <ValidationError prefix="CarModel" field="carModel" errors={state.errors} />
+                      <ValidationError prefix="carModel" field="carModel" errors={state.errors} />
                     </div>
                   </div>
                 </div>
@@ -214,7 +215,9 @@ const ContactUs = () => {
                   {damageType === 'Other' && (
         <div className="mt-2">
           <label className='mb-2' htmlFor="otherDamage">Other Damage:<span className='text-danger'>*</span></label>
-          <input type="text" id="otherDamage" required className="form-control px-2 py-2 rounded-3" name="otherDamage" value={otherDamage} onChange={(e) => setOtherDamage(e.target.value)} />
+          <input type="text" id="otherDamage"  className="form-control px-2 py-2 rounded-3" name="otherDamage" value={otherDamage} onChange={(e) => setOtherDamage(e.target.value)} />
+          <ValidationError prefix="otherDamage" field="otherDamage" errors={state.errors} />
+
         </div>
       )}
                   <ValidationError prefix="Damage" field="Damage" errors={state.errors} />
@@ -240,7 +243,9 @@ const ContactUs = () => {
       {destination === 'Garage I know' && (
           <div className="ms-3 my-2">
             <label className='mb-2' htmlFor="garageLocation">Garage Location<span className='text-danger'>*</span></label>
-            <input type="text" id="garageLocation" required className="form-control px-2 py-2 rounded-3" name="garageLocation" value={garageLocation} onChange={(e) => setGarageLocation(e.target.value)} />
+            <input type="text" id="garageLocation"  className="form-control px-2 py-2 rounded-3" name="garageLocation" value={garageLocation} onChange={(e) => setGarageLocation(e.target.value)} />
+            <ValidationError prefix="garageLocation" field="garageLocation" errors={state.errors} />
+
           </div>
         )}
       <ValidationError prefix="destination" field="destination" errors={state.errors} />
@@ -259,11 +264,13 @@ const ContactUs = () => {
         
       </div>
       </div>
-      
+      <ValidationError prefix="requestType" field="requestType" errors={state.errors} />
       {requestType === 'Request Later' && (
           <div className="mt-2">
             <label className='mb-2' htmlFor="dateTime">Select Date and Time<span className='text-danger'>*</span></label>
-            <input type="datetime-local" id="dateTime" required className="form-control px-2 py-2 rounded-3" name="dateTime" value={dateTime} onChange={handleDateTimeChange} />
+            <input type="datetime-local" id="dateTime"  className="form-control px-2 py-2 rounded-3" name="dateTime" value={dateTime} onChange={handleDateTimeChange} />
+            <ValidationError prefix="dateTime" field="dateTime" errors={state.errors} />
+
           </div>
         )}
     </div>
